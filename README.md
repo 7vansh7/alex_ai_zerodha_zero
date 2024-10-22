@@ -1,8 +1,6 @@
-Alex is a customer engagement and customer service chatbot capable of making phone calls, checking customer info and much more
+This uses alex as a base and iterates over it, it is being made for Zerodha
 
-Alex can easily connect to a backend and help fulfill the customer's needs based upon the data it interprets
-
-Here the use case is of a food delievery website -
+Its name is Zero 
 
 ![1727877778805](image/README/1727877778805.png)
 
