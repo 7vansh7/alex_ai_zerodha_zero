@@ -14,7 +14,7 @@ with open('./final_link_list.txt','r') as f:
 file_to_write = open('./data_file.txt','a')
 
 try:
-    for index,x in enumerate(link_list[1101:]):
+    for index,x in enumerate(link_list[1488:]):
         print(f'index->{link_list.index(x), index}')
         response = requests.get(x)
         response.raise_for_status()  

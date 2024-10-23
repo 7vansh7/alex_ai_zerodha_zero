@@ -23,13 +23,35 @@ import time
 #         data = BeautifulSoup(response.text, 'html.parser').text
 #         file.write(f'{data} +\n')
 #         print('written')
-file2 = open('new.txt','a')
-data = open('./unclean_data_file.txt','r').read()
+# file2 = open('new.txt','a')
+# data = open('./unclean_data_file.txt','r').read()
+# model = genai.GenerativeModel('gemini-1.5-flash-002',safety_settings=safety_settings)
+# chat = model.start_chat()
+# data_clean_prompt = f'''The following contains data which needs to be cleaned,
+#                                 get all the QUESTIONS-ANSWERS in the data and in this format only 
+#                                 question - answer, the data is ->
+#                                 {data} '''
+# res = chat.send_message(data_clean_prompt).text
+# file2.write(res)
+
+data = open('./data_file.txt','r').readlines() 
+file_to_write = open('./cleaned.txt','a')
+# print(len(data))
+# print(data[0:500])
 model = genai.GenerativeModel('gemini-1.5-flash-002',safety_settings=safety_settings)
 chat = model.start_chat()
-data_clean_prompt = f'''The following contains data which needs to be cleaned,
-                                get all the QUESTIONS-ANSWERS in the data and in this format only 
-                                question - answer, the data is ->
-                                {data} '''
+
+# x = int(6750)
+# for y in range(7000,13993,250):
+text = ''
+# print(x,y)
+for d in data[13750:13993]:
+    text += d
+data_clean_prompt = f'''The following data contains questions and answers,
+                        REMOVE DUPLICATES and QUESTIONS WITH NO ANSWERS, RETURN REST OF THE DATA AS IT IS
+                        the data is being sent over multiple requests as it is quite large
+
+                            {text}'''
 res = chat.send_message(data_clean_prompt).text
-file2.write(res)
+file_to_write.write(res)
+print('written')
