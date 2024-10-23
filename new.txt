@@ -1,0 +1,367 @@
+Why is the screen blank when the option chain and fundamentals are opened on Kite app? - This generally happens if the Android System WebView and the browser are not updated. To learn more about updating the same, see How to update Android System WebView and default browser?
+
+Why are there live ticks on a Saturday? - A mock trading session is conducted by the exchange on one Saturday each month. This session allows brokers to test their trading infrastructure, new products/systems, and run contingency drills. Consequently, live ticks appear on Kite on a Saturday. Holdings or position values are displayed according to the mock-trading prices. This might result in incorrect prices on the Marketwatch and potentially inaccurate positions or holdings values. However, at the end of the session, Friday's closing will be updated.
+
+How to modify a stock SIP? - To modify stock SIPs, follow these steps: Kite App Tap on Orders. Tap on SIP. Tap on the SIP that is to be modified. Tap on Edit and make the required changes. Slide the Save button. Kite web Click on Order and then on SIP. Click on Options. Click on Edit and make the required changes. Click on Save. If a SIP is paused, orders will not go through from the next scheduled date unless resumed.
+
+Can clients use Kite from the mobile browser? - Yes, Kite can be accessed from the mobile browser without installing Kite app. Visit kite.zerodha.com and login using Zerodha credentials as displayed below:
+
+Why was an email sent saying the IP address is blocked from using Kite? - Zerodha has systems in place to stop malicious actors from attacking their systems. However, sometimes they impact customers that didn't do anything wrong. Zerodha is working to fix these limits to stop spammers without affecting real people. If an IP address was flagged incorrectly, create a ticket and Zerodha will check and act accordingly.
+
+What is iNAV and how to view it on Kite? - iNAV stands for Intraday or Indicative Net Asset Value and is used to calculate the fair value of an ETF. Unlike mutual fund units, which are allotted based on the NAV, ETF units are bought and sold based on demand and supply in the market. To view the iNAV of an ETF on Kite, search iNAV on the marketwatch and click on Add. Orders placed on iNAV instruments are rejected, and the following error is displayed on Kite:
+
+Does Zerodha offer a Systematic Withdrawal Plan (SWP) for stocks? - A Systematic Withdrawal Plan (SWP) can be used to make regular, periodic withdrawals by selling a part of the holdings. While Zerodha does not provide Systematic Fund Withdrawals (SFW) or Systematic Withdrawal Plans (SWP) for stocks, clients can use the stock SIP feature. The stock SIP feature can be used to sell stocks, ETFs and SGBs from the holdings periodically, and the funds are credited to the client's Zerodha account. The funds can be withdrawn or automatically credited to the primary bank account through quarterly settlements.
+
+How to fix the Connection error when the Manage account tab on the Kite app is opened? - If you're facing a connection error when you click on the manage account tab on the Kite app, you will have to clear the app data from the Kite app. To solve this issue, follow these steps: On Android Go to Phone Settings. Go to the Installed Apps. Tap on Kite. Tap on Storage. Tap on the Clear Data option. Re-login to Kite. For iOS. Reinstall the app and log in again.
+
+Does Zerodha provide a demo of Kite? - A demo version of Kite with dummy data can be accessed by visiting kite-demo.zerodha.com/dashboard. For further assistance, create a ticket, and Zerodha representatives will get in touch.
+
+What is the disclosed quantity feature and how to use it? - Disclosed quantity feature while placing equity orders allows only a part of the total order quantity to be disclosed to the market as shown in the market depth. Once a part of the order is executed, the next part is disclosed to the market. This feature can be used while placing large orders to reduce impact cost and to get a better execution by disclosing only a portion of the large order in the best bids and offers in the market depth.
+
+What is total collateral on Kite? - Total collateral is the sum of the collateral amount received from pledging equity holdings and liquid funds. Collateral from liquid funds is considered 100% cash when used to take any positions.
+
+How to switch between exchanges on the order window? - Stocks can be bought or sold on either exchange. To switch between exchanges on the order window, click on BSE or NSE.
+
+Can Bitcoin or other cryptocurrencies be bought on Kite? - No, Bitcoin or other cryptocurrencies cannot be bought on Kite. The current legal implications of trading cryptocurrency in India are ambiguous. Since Zerodha is a SEBI registered entity, only products explicitly approved by SEBI can be offered.
+
+Why does the Kite app say “Tap to buy” instead of “Swipe to buy” while placing an order? - The Kite app may say Tap to buy instead of Swipe to buy if the accessibility mode is enabled.
+
+How to update Android System WebView and default browser? - Search for Android System WebView on Play Store and update it to the latest version. Update the default browser set on the device to the latest version. In most cases, Chrome is the default Browser.
+
+How to clear the Kite app data? - To clear the Kite app data, follow these steps: On Android Go to Settings. Go to the Installed Apps. Tap on Kite. Tap on Storage & Cache. Tap on Clear storage. On iOS Reinstall Kite app.
+
+What are the different order types available on Kite and how are they executed? - An order type signifies the nature of instruction given to a stockbroker to execute transactions. The following order types are available on Kite: Market: A market order is an instruction to buy or sell shares at the current best available price. Limit: A limit order is an instruction to buy or sell shares at a specified price. Stoploss: A stop-loss order is an order placed to limit losses when there is a concern that prices may move against the trade.
+
+How to switch to dark theme on Kite? - The light theme on Kite is enabled by default. To switch to Dark theme, follow these steps: Kite app Tap on the user ID. Tap on Settings. Tap on Dark. Kite web Click on the user ID. Click on My Profile. Click on Dark.
+
+How to view the option chain of F&O contracts on Kite? - To view the option chain on Kite, follow these steps: Kite App Tap on the instrument on the Marketwatch. Tap on Option chain. Kite Web Add the instrument to the watchlist. Click on the more icon. Click on the Option Chain.
+
+Why does the Last Traded Price (LTP) not match the bids and offers in the market depth? - The quotes shown in the market depth are based on the buyers and sellers, whereas the Last traded price (LTP) is updated once a trade takes place. Therefore, the LTP does not fluctuate to match the bids and offers, though the fluctuations are seen in the market depth.
+
+Why is the option contract or option chain LTP on Kite different from NSE? - The option contract or option chain LTP on Kite may differ from NSE because the option is illiquid. For illiquid contracts, if there are no trades in the last 30 minutes of the trading session, NSE will provide a theoretical settlement price.
+
+How to enable device lock on mobile? - Using third-party apps to lock the device may cause issues with Kite app login. Ensure that the device is locked using the device settings. As per new regulatory requirements, along with the password, all trading account access must be secured with an additional authentication factor such as a Time-based OTP or device lock such as fingerprint, face ID, and device PIN or password.
+
+Why is access to Kite app restricted by the internet provider? - Zerodha uses Cloudflare as the content delivery network (CDN). If an internet service provider's Domain Name System (DNS) server does not support domains under Cloudflare, access to Zerodha services like Kite, Coin, Console, etc., could be affected.
+
+Why was an email sent alerting about a login from a different city? - An email from Zerodha and a mobile notification on the Kite app will be sent if a client is logging in from a new city or IP address. This alert is sent to ensure that the client is notified of possible breaches in their account.
+
+What are the auto square-off timings for open intraday positions? - Open intraday positions are closed or auto-squared-off at or after the below-mentioned time: Equity/Cash Equity/Index Derivatives Currency Derivatives Commodities Auto square off time 3:20 PM 3:25 PM 4:45 PM 25 minutes before the close
+
+How much margins or leverage does Zerodha provide? - Zerodha provides up to 5 times (20% margin) leverage for intraday using Margin Intraday Square off (MIS) and Cover Order (CO) for equity. With ₹1 lakh, stocks can be bought or sold for intraday up to ₹5 lakhs.
+
+Margin Trading Facility (MTF) FAQs - MTF is currently available only for beta users, and we will soon open it up for others.
+
+Why is Margin Trading Facility (MTF) not allowed for some clients? - MTF is currently available only for beta users, and we will soon open it up for others.
+
+Why does the Kite fund balance not include profits from today? - The available margin on Kite funds only includes credits that are available for taking trades. Due to the upfront margin requirements applicable from September 2020 onward, intraday profits are not made available for trading until settled by the exchange (i.e. on T+1).
+
+How to verify the collateral details reported by Zerodha? - As per regulations, Zerodha, the clearing member, is required to report the client’s detailed collateral information to the Clearing Corporations (CCs), i.e., NSE Clearing Limited (NCL) for equities and MCX Clearing Limited (MCXCCL) for commodities.
+
+What is Zerodha's policy on the physical settlement of equity derivatives on expiry? - All stock F&O contracts traded on Indian exchanges require compulsory delivery. If an individual holds an ITM stock option or a futures contract upon expiry, they must give or take delivery of the underlying stock².
+
+Why does Zerodha square off positions? - Zerodha may square off positions in the following scenarios: If the required margins are not maintained to hold the position, a margin call SMS and an email are sent to the clients notifying them to add the funds.
+
+Why is margin benefit not provided for the covered call strategy in Zerodha? - Margin benefit is not provided for the covered call strategy in Zerodha because exchanges do not offer margin benefit for stock option positions against the underlying stock held in the client’s portfolio.
+
+Why does Zerodha increase intraday margins for MIS and CO on days when the market is volatile? - Margins are collected from customers to prevent defaults based on minimum exchange requirements.
+
+What are the different types of margins charged by the exchange? - The exchange requires a minimum margin to be collected from the client for each trade. The specific margins charged by the exchange can vary depending on the trading segment.
+
+How to find the intraday leverages currently offered for MIS and CO? - The leverage or margin offered for intraday using MIS and CO product type can be checked on the order window and the margin calculator.
+
+Why was an email and voice message received for the provisional margin shortfall? - Zerodha sends a voice message and an email notifying the clients to transfer sufficient funds by 11:59 PM if their account has a margin shortfall.
+
+Why was the order cancelled with the reason "Pending order was cancelled by the exchange at the end of the trading session"? - Unmatched pending orders on BSE are automatically cancelled at the market close, resulting in orders being cancelled with the reason Pending order was cancelled by the exchange at the end of the trading session.
+
+What changes due to the new upfront margin requirements? - As per regulations, effective from October 7, 2024, 100% of the proceeds from selling holdings will be credited to the trading account and made available on the same day for all trades, including stocks and F&O positions.
+
+Why is a nudge displayed mentioning that 100% of the funds from the sale of holdings can be used for other trades? - The nudge is displayed to inform users of a recent regulatory change effective October 7, 2024.
+
+Why was the SLM order with trigger price outside circuit limits not rejected? - SL-M (Stop-Loss Market) orders with triggers set outside the circuit limits are not considered active orders in the exchange's order book.
+
+What does 'free cash' mean? - Free cash refers to the balance available in the Zerodha account that can be used for placing new trades.
+
+Why are market orders blocked for long-dated options? - Market orders are blocked for long-dated options due to the illiquid nature of these contracts.
+
+Will physical settlement occur if there is no cash available but LiquidBees are pledged? - To ensure physical settlement of open F&O stock positions, maintaining the required F&O margins in either cash or pledged collateral is necessary.
+
+Why is the entire margin required to enter into a hedged position? - The full margin will be required to sell (short) options or execute futures before placing a buy hedge position.
+
+How to use limit orders as market orders? - A limit order can be placed as a market order by doing the following: Placing a buy order with a limit price above the last traded price (LTP). Placing a sell order with a limit price lower than the LTP.
+
+Why are market orders blocked for deep ITM index options? - Market orders are blocked for deep ITM index options as they are usually illiquid contracts with low trading activity.
+
+Why does the Kite fund balance not include profits or credits from previous trading days? - The funds available for trading are shown in the Available margin on Kite funds.
+
+Why is higher than usual margin blocked for my F&O trades close to expiry? - As Futures and Options (F&O) contracts near their expiry date and approach physical delivery, the margins required for these contracts are increased in proportion to the contract value.
+
+Does Zerodha provide leverage against the available funds in my trading account? - Zerodha provides leverage or margin when intraday orders are placed (MIS or CO) based on the prescribed peak margin requirements by SEBI.
+
+What is Value at Risk (VAR), Extreme Loss Margin (ELM), and Adhoc margins? - Value at Risk (VAR) is a statistical measure used in risk management to estimate the potential loss in value of a portfolio of assets due to market movements over a certain time period and with a certain level of confidence.
+
+Why is there a restriction in placing new NRML orders in some currency contracts? - Brokerage firms have a limit on the maximum open interest across all their clients' F&O positions.
+
+Can the profits from F&O be used on the same day? - The Kite balance will not reflect intraday profits until the exchange settles them i.e. on T+1 day.
+
+What is a Margin calculator? - The margin calculator helps calculate the margins required and the leverage offered for trades in all segments.
+
+What is the leverage indicator? - The leverage indicator displays the amount of leverage a client receives for intraday trading of equity stocks.
+
+Why was the account in a negative balance after the market order was executed? - When a market order is placed, it is executed at the best available price after validation. However, there may be differences between the validation and execution prices.
+
+Can the options premium received be used to open new F&O positions? - When the long/buy option positions are exited, or new write/short options are entered, the proceeds or credit of option premium can be used for only new long/buy option trades on the same trading day and only within the same segment.
+
+By when should additional margins be added if a margin call is received? - Zerodha sends margin call SMS and email when the margin utilisation exceeds the available balance.
+
+How to find the margins required to take a trade? - To know the margin required to take a position in equity intraday, futures, option shorting, commodities and currency, refer to the order window while placing the order or check the margin calculator.
+
+Does Zerodha provide leverage for delivery/carry over positions? - No, Zerodha currently does not provide any leverage or margins for equity delivery/carry-over positions, i.e. orders placed through CNC product type.
+
+Can long-dated contracts be traded in Zerodha? - Zerodha allows trading in long-dated contracts, but clients must check the liquidity of the option contract by examining the market depth before trading.
+
+Why should funds be transferred for a margin shortfall if the client has already closed the positions? - Funds should be transferred to meet the margin shortfall even if the client has already closed the positions because margin requirements are monitored throughout the day based on four random snapshots taken by the Clearing Corporations (CC).
+
+Can exiting one leg of a hedged position lead to a peak margin shortfall? - Exiting a hedged trade's low-risk leg is a common reason for peak margin shortfall.
+
+What is Mark to Market (MTM)? - MTM or mark-to-market in futures is a process of revaluing open futures contracts at the end of each trading day to determine the profit or loss that has occurred due to changes in the price of the underlying asset.
+
+Why are additional margins being blocked for an existing long option position? - Additional margins are blocked for the existing long option position if the moneyness of the contract turns from OTM to ITM.
+
+How to verify if Zerodha has passed the margin penalty to the exchange? - Zerodha does not collect penalties on a client-by-client basis but rather as a collective sum for all clients.
+
+What is a margin penalty, and why is it charged? - A margin penalty is a charge imposed for failing to maintain sufficient margin in a trading account.
+
+How is the margin penalty calculated? - The margin penalty is a fee charged when a trading account does not have enough funds to cover the required margin.
+
+Will there be a peak margin penalty if a loss is made due to a freak trade? - There won't be any peak margin penalty for positions that suffer significant losses due to a freak trade since such trades usually last only a few seconds and don't affect the margin requirements significantly.
+
+Why should clients transfer funds to cover margin shortfalls? - Clients must add funds to their Zerodha account by 11:59 PM on the same day in case there is a margin shortfall in their account to avoid the following:
+
+What are margins and how can margin shortfall occur? - As per regulations, effective from October 7, 2024, 100% of the proceeds from selling holdings will be credited to the trading account and made available on the same day for all trades, including stocks and F&O positions.
+
+What does CNC, MIS and NRML mean? - CNC, MIS, and NRML are the product types used when placing orders through Kite.
+
+How to convert MIS to CNC/NRML and vice versa? - MIS positions can be converted to CNC or NRML only if sufficient margins are available in the trading account.
+
+Why is the MIS or CO position not auto squared off? - Zerodha squares off open intraday positions at or after the auto-square off timings.
+
+How to keep track of stocks blocked for trading? - A consolidated list of stocks blocked or allowed by Zerodha can be found on this list.
+
+What will happen to my intraday (MIS/CO) position in case the stock circuit limits are hit? - An intraday (MIS/CO) order allows traders to use leverage to enter buy or sell trades, with the potential to trade up to 5 times the available funds in their account.
+
+Why are intraday (MIS/CO) orders not allowed for some stocks? - Intraday (MIS/CO) orders are not allowed for some stocks due to regulatory or risk management reasons.
+
+What are the reasons for order rejection? - Orders can be rejected for various reasons, such as insufficient margin, incorrect usage of order type, unavailability of the scrip for trading, stock group changes, and more.
+
+Why was the limit order executed at the market price instead of the specified limit price? - A limit order enables clients to purchase or sell a stock at a specific price or a better price.
+
+What are limit and market orders? - Limit orders are used to buy or sell an instrument at a specific price.
+
+Why did the limit order not execute even though the share price matched the order price? - Exchanges use a principle called price-time priority to handle orders and quotes.
+
+What are cover orders and how to use them? - A Cover Order (CO) is an order with an in-built risk mitigation mechanism.
+
+What are stoploss orders and how to use them? - A stoploss order is a buy/sell order placed to limit losses when there is a concern that prices may move against the trade.
+
+Why was the stop-loss order executed even though the price did not breach the trigger? - We get this query quite often, “my limit/market/stoploss order was executed, but the price at which it is executed doesn’t show up on the charts.
+
+What does Day, Immediate and Minutes Validity mean? - Day: Orders placed with Day validity remain open for the order matching until they are executed or till the market closes.
+
+What is Alert Triggers Orders (ATO)? - Alert Triggers Orders (ATO) is a feature that automatically places a linked basket of orders on the exchange when a Kite alert is triggered.
+
+What are Iceberg orders, and how to use them? - Iceberg is an order type that slices orders of larger quantity (or value) into smaller orders, where each small order, or leg, is sent to the exchange only after the previous order is filled.
+
+What is market price protection in Alert Triggers Order (ATO)? - Alert Trigger Orders (ATO) is a feature that places a linked basket of orders when an alert is triggered.
+
+How to use the new order window on Kite app? - The new simplified order window on the Kite app allows users to place orders with just a few clicks.
+
+What does Charges on the Kite order window mean? - Brokers are required to display all applicable charges on the order placement window as per exchange guidelines.
+
+What is the Quick order window? - The Quick order window only shows the required fields to place an order, to make trading or investing easier and faster.
+
+Why are IPO and G-Sec orders blocked on Kite? - The IPO and G-Sec orders may be blocked for any of the following reasons: PAN and Aadhaar are not linked.
+
+How to use Stoploss-limit(SL) order like a Stoploss-Market(SLM) order? - A trade that gets executed at a significantly distant price from the current market price is commonly referred to as a freak trade.
+
+How to place buy or sell orders on Kite without adding instruments to marketwatch? - To place a buy or a sell order on Kite, follow these steps: Kite web Search for the instrument in the search bar.
+
+What is the trigger price in a stoploss order? - The trigger price is the point at which a buy or sell order becomes active for execution on the exchange servers.
+
+Why was the index option AMO market order rejected? - Index option AMO market orders are rejected as they are disallowed to prevent high-impact costs.
+
+Why is the order pending on Kite? - There are two possible reasons why an order could be pending on Kite.
+
+Why are market orders blocked for trade to trade and debt category instruments? - Market orders are blocked for trade-to-trade and debt-category instruments due to their illiquid nature.
+
+How to use limit order as a market order? - A trade that gets executed at a significantly distant price from the current market price is commonly referred to as a freak trade.
+
+Why is the Good Till Triggered (GTT) feature and its types? - The Good Till Triggered (GTT) feature is an order that stays active until the trigger condition is met.
+
+How to use the Good Till Triggered (GTT) feature? - The Good Till Triggered (GTT) feature is an order that stays active until the trigger condition is met.
+
+Why are GTTs disabled, cancelled, expired, or rejected? - GTTs may be disabled, cancelled, expired, or rejected for the following reasons:
+
+Why was the GTT order triggered but not executed? - The GTT order gets triggered but does not execute in the following scenarios:
+
+Why is the prompt 'GTT stoploss is invalid' displayed when placing an order to buy index options? - The GTT stop-loss is invalid prompt appears when placing an order to buy index options to encourage the use of stoploss during trading, particularly given the inherent risk associated with options trading.
+
+Why should a stoploss be set using GTT when buying stock or index options? - Buying options is by the far the riskiest form of trading if you aren’t following proper risk management rules.
+
+Where can the active and triggered GTT orders be tracked? - To track active and triggered GTT orders, follow these steps: Kite app Tap on Orders. Tap on GTT. Kite web Click on Orders. Click on GTT.
+
+Will there be a notification if a GTT order is triggered? - Yes, Zerodha will notify clients when a GTT order is triggered.
+
+Why was the sell Good Till Triggered (GTT) order rejected? - The GTT order can be rejected for various reasons, including:
+
+Why is the GTT not triggered even though the GTT conditions are met? - A GTT is triggered when a stock price hits or crosses the trigger price based on the ticks recorded or displayed live on the system.
+
+How to place a GTT order on Kite app? - To place a GTT order on the Kite app, follow these steps: Tap on the instrument.
+
+Why is a triggered GTT order that is pending execution not visible? - A triggered GTT order pending execution is not visible because, once triggered, it remains valid for the remainder of the trading day as a CNC (Cash and Carry) limit order with Day validity.
+
+Are Good Till Triggered (GTT) orders available for futures and options (F&O) contracts? - Yes, GTT orders are available for F&O contracts.
+
+Why was the buy GTT order rejected? - The GTT order can be rejected for the following reasons:
+
+How to modify Good Till Triggered (GTT) orders? - Only active GTT orders can be modified.
+
+How to use the Good Till Triggered (GTT) feature? - The Good Till Triggered (GTT) feature is an order that stays active until the trigger condition is met.
+
+What is the validity of a GTT order? - A GTT (Good Till Triggered) order remains valid for one year from the date of placement.
+
+How to delete Good Till Triggered (GTT) orders? - To delete a GTT order, follow these steps: Kite app Tap on Orders. Tap on GTT.
+
+Why is the price mentioned in the GTT email different from the GTT trigger price? - This happens because the price of the instrument may have skipped the trigger price due to high market volatility.
+
+How to place a buy GTT One Cancels the Other (OCO) order? - To place a GTT OCO order, follow these steps: Kite app Tap on the instrument.
+
+How to place basket orders on Kite? - A basket order allows a client to place multiple orders at the same time.
+
+How to use the basket order feature on Kite app? - To create a basket order on Kite app, follow these steps: Tap on Orders.
+
+How to use basket orders to buy options outside the Nifty or Bank Nifty range? - To use baskets for buying Nifty and Bank Nifty options outside the allowed range, start by entering the short/sell order in the Basket.
+
+Why is "Analyze" option not loading on Kite web? - The Analyze feature for basket orders and positions on Kite web might not load properly, and a blank screen may be displayed if third-party cookies are blocked in the browser.
+
+How to import files to execute trades on Kite? - To import baskets, follow these steps: Click on Orders.
+
+Why are the orders in the baskets executed partially? - Basket orders offer a convenient way to execute multiple individual orders simultaneously.
+
+What is the required and the final margin in a basket order? - In a basket order, Required margin refers to the funds required to place the basket order.
+
+How to share Kite baskets? - Basket orders created on Kite can be shared with someone by exporting the basket and sharing the generated file.
+
+Why is a nudge displayed mentioning that lenders have signed an Inter Creditor Agreement (ICA)? - An Inter Creditor Agreement (ICA) is a legal agreement between two or more creditors who have lent money to the same borrower.
+
+Why is a nudge displayed saying that the {instrument} is a risky penny stock. Be cautious? - Zerodha warns the clients about the stocks that are considered risky penny stocks, and that might be used for stock market scams such as phishing.
+
+Why is a nudge displayed saying that the order price is x% above or below the Last Traded Price (LTP)? - This nudge is displayed when a limit order is placed above the LTP for buy orders and below the LTP for sell orders.
+
+What are surveillance measures and risks associated with them? - Surveillance measures are implemented by SEBI and exchanges to proactively monitor securities across markets, ensuring the protection of investors' and traders' interests.
+
+What is Nudge? - Nudges are real-time alerts shown on Kite, our trading platform, that warn users of risks associated with a particular trade before they execute the trade.
+
+Why is a nudge displayed mentioning that the stock is a part of the ESM surveillance list? - Exchanges mandate brokers to display a notification mentioning all the surveillance measures on the instrument when the client tries to place an order.
+
+Why is a nudge displayed mentioning that a portion of outstanding shares are pledged? - Exchanges mandate brokers to display a notification mentioning all the surveillance measures on the instrument when the client tries to place an order.
+
+What are tags and how to use them? - Tags is a feature that allows investors to categorise and track their investments efficiently.
+
+How to modify or delete tags ? - To modify or delete tags on Kite app, follow these steps: Tap on Portfolio.
+
+What are tags and how to use them? - Tags is a feature that allows investors to categorise and track their investments efficiently.
+
+Why can't pending or partially filled auction orders be cancelled? - Pending and partially filled orders cannot be cancelled after the auction session ends.
+
+What are auction markets and how to participate in them on Kite? - Auction orders currently cannot be placed in BSE’s auction market.
+
+Why are multiple offers displayed for the same price in the market depth of the auction market? - In the market depth of the auction market, all orders are shown separately, unlike the market depth of the normal market, where the quantity of all orders at the same price is grouped.
+
+How to track the previous auction market trades? - A separate contract note is sent for each day’s auction market transaction, which can be used to track the previous auction market trades.
+
+How to withdraw money from the Zerodha account? - To place a withdrawal request on Kite app, Kite web, or Console, follow these steps:
+
+What is withdrawable balance in Zerodha & how is it calculated? - The amount of money that can be transferred from the Zerodha account to the primary bank account is known as the withdrawable balance.
+
+Why is the payout amount less than what was requested? - The payout amount could be lower than the requested payout because the withdrawable balance can reduce post end of the day process when the charges and net obligation.
+
+Why are the sales proceeds not withdrawable on the same day? - If clients have closed their positions today, they cannot withdraw the funds immediately since exchanges in India follow a rolling settlement cycle.
+
+How to withdraw money instantly in Zerodha, and how does it work? - Using the instant withdrawal feature, clients can instantly withdraw money from their Zerodha account to their primary bank account.
+
+How to place a fund withdrawal request for Orbis account? - If an Orbis account is linked to Zerodha, fund withdrawal requests cannot be placed on Console.
+
+Why is the withdrawable balance negative? - The withdrawable balance will be negative in the following scenarios:
+
+How much time does it take to process a withdrawal request? - Fund withdrawal requests are processed at cut-off times, as shown in the table below.
+
+When can the funds be withdrawn if the shares are sold or positions are closed today? - The funds can only be withdrawn from the trading account if they are available in the Withdrawable balance.
+
+How much time does it take to process a withdrawal request? - Fund withdrawal requests are processed at cut-off times, as shown in the table below.
+
+Why was the withdrawal request rejected? - Withdrawal requests can be rejected due to the following reasons:
+
+Why was a message sent saying that the withdrawal request was processed when no request was ever made? - Clients are notified via email and SMS when funds are transferred back to the primary bank account because of quarterly settlements.
+
+Can money be withdrawn to the secondary bank account? - No, money cannot be withdrawn to the secondary bank account.
+
+How is withdrawable balance calculated after pledging? - You can pledge the securities in the demat account to trade F&O.
+
+How to add money to the Zerodha account using UPI? - To add money to the Zerodha account using UPI, follow these steps: On Kite app Click on Funds.
+
+Why is money transferred via UPI not added to the Zerodha account? - If you consistently face issues transferring money from the UPI app, please try a different UPI app.
+
+How to add money to Zerodha using a cheque? - To add money using a cheque, follow these steps: Use Zerodha Broking Ltd as payee to transfer funds to the equity account.
+
+How to add money on Kite app if the UPI app is installed on a different device? - To add funds on Kite app if the UPI app is installed on a different device, follow these steps: Tap on Add funds.
+
+How to add money using netbanking on Kite? - Payment gateway charges of ₹9 + 18% GST per transfer will be levied.
+
+What are the different ways of transferring money to the Zerodha account? - There are three different ways to transfer funds to the Zerodha account:
+
+How to transfer money to my Zerodha account using IMPS,NEFT or RTGS? - To transfer money, add Zerodha as a Beneficiary (Payee) in your internet banking portal.
+
+Why are funds transferred using UPI not reflecting in the Zerodha account? - If the fund transfer using UPI has failed, and if the funds are debited from the bank account, the bank will reverse the funds.
+
+Why is the money added through netbanking on Kite not reflecting in the Zerodha account? - If funds transferred through net banking on Kite are not reflected in the Zerodha account, the transfer will be marked as pending at the bank, and Zerodha will not receive confirmation of a successful transfer.
+
+How much time does it take for the funds to get transferred to the Zerodha account? - The time taken for the funds to get transferred to the Zerodha account depends on the method of transfer.
+
+Why are the funds added today not shown in the funds statement on Console? - When funds are added to the Zerodha account during trading hours, they show up under Payin on Kite.
+
+Why are the funds added through IMPS, NEFT or RTGS not reflected in the Zerodha account? - Funds transferred through IMPS usually take up to 10 minutes to reflect in the Zerodha account after transferring during market hours.
+
+What is Zerodha’s alternate bank account number if the bank doesn’t permit alphabets to be added as a beneficiary? - If a bank does not allow the transfer of funds to accounts with alphabets or allow them to be added as beneficiaries, use the alternative bank accounts mentioned below:
+
+What is the name of the payment gateway vendor in Zerodha? - NTT DATA Payments is one of Zerodha's payment gateway providers.
+
+What are the limits on fund transfers and fund withdrawals in Zerodha? - The fund transfer limits for various modes of payment per day are as follows:
+
+How to add money to Zerodha account using HDFC netbanking? - A transfer from HDFC bank using netbanking can be made seamlessly using the transfer within the bank option.
+
+What to do if the bank has changed the branch IFSC or account number? - Sometimes, banks undergo internal restructuring, get merged or acquired, due to which the account numbers and IFSC can change.
+
+Can funds be transferred using IMPS, NEFT, RTGS or cheque from bank accounts not linked to the Zerodha account? - As per SEBI mandate, funds can be transferred only from bank accounts linked to the Zerodha account.
+
+Can funds in the equity segment be used to trade in commodities? - Yes, clients can use funds from the equity segment to trade in the commodities segment through the single ledger facility.
+
+Why have I received a UPI collect request from Zerodha, which I did not raise? - A wrong UPI collect request is sent in the following cases:
+
+Can funds be transferred using digital wallet? - Funds cannot be transferred using a digital wallet.
+
+Why is a message displayed asking to select the commodity category? - All commodity exchanges are required to classify the market participants into various categories as per SEBI.
+
+What is the single ledger facility? - Single ledger is a facility that combines all segments of trading in one place.
+
+What is the single ledger facility? - Single ledger is a facility that combines all segments of trading in one place.
+
+What is the process for settling intraday positions if there is a margin shortfall? - Zerodha will notify you with email and SMS messages in the event of margin shortfall during the day.
+
+What are the different types of accounts that can be opened at Zerodha? - Zerodha allows opening the following account types:
+
+What is an NRI account and how to open it at Zerodha? - A Non-Resident Indian (NRI) account is a type of account that is opened by individuals who have moved out of India and are looking to invest or trade in the Indian market.
+
+How to transfer shares from my Zerodha demat account to another demat account offline? - To transfer shares from a Zerodha demat account to another demat account offline, you need to fill out the Delivery Instruction Slip (DIS) form.
+
+How to update KYC details at Zerodha? - To update your KYC details with Zer

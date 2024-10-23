@@ -1,6 +1,7 @@
 import requests 
 from bs4 import BeautifulSoup
 from api.config import genai,safety_settings
+import time
 
 model = genai.GenerativeModel('gemini-1.5-flash-002',safety_settings=safety_settings)
 chat = model.start_chat()
@@ -13,8 +14,8 @@ with open('./final_link_list.txt','r') as f:
 file_to_write = open('./data_file.txt','a')
 
 try:
-    for index,x in enumerate(link_list[214:]):
-        print(f'index->{index}')
+    for index,x in enumerate(link_list[1101:]):
+        print(f'index->{link_list.index(x), index}')
         response = requests.get(x)
         response.raise_for_status()  
 
@@ -26,6 +27,7 @@ try:
         res = chat.send_message(data_clean_prompt).text
         file_to_write.write(f'{res}\n')
         print('written\n')
+        time.sleep(1.5)
 
 except Exception as e:
     print(x, f'\n{link_list.index(x)}')
