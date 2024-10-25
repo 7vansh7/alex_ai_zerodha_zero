@@ -1,8 +1,8 @@
 from config import safety_settings,history,genai
 
 functions = {'function_declarations': [
-      {'name': 'call_delievery_partner',
-       'description': '''this function when called calls the delievery partner and returns the new time till delievery''',
+      {'name': 'call_delivery_partner',
+       'description': '''this function when called calls the delivery partner and returns the new time till delivery''',
       },{
        'name': "send_email_customer_service",
     'description': "this function sends an email to the customer service of the company when the issue could not be resolved",
@@ -10,8 +10,8 @@ functions = {'function_declarations': [
 
 genai.protos.Tool(functions)
 
-def call_delievery_partner():
-    return 'from our call i could infer that the delievery partner will be there in 2 minutes'
+def call_delivery_partner():
+    return 'from our call i could infer that the delivery partner will be there in 2 minutes'
 
 def send_email_customer_service():
     answer =  """An email has been sent to our customer service department 

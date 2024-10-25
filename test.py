@@ -1,57 +1,75 @@
-import requests 
-from bs4 import BeautifulSoup
 from api.config import genai,safety_settings
-import time
-# arr = [1,3,3,23,2,2]
-# index_file = open('./index_file.txt','r')
-# number = index_file.readlines()
-# last_line = int(number[-1].strip()) 
 
-# for x in arr[last_line:]:
-#     print(x)
-# link_list = []
-# with open('./final_link_list.txt','r') as f:
-#      for line in f:
-#         link_list.append(line.strip())
-#      f.close()
-# file = open('./unclean_data_file.txt','a')
-# for index,x in enumerate(link_list[856:]):
-#         print(f'index->{link_list.index(x), index}')
-#         response = requests.get(x)
-#         response.raise_for_status()  
+file = open('./final_cleaned_data.txt','r')
+zerodha_info_data = file.read()
 
-#         data = BeautifulSoup(response.text, 'html.parser').text
-#         file.write(f'{data} +\n')
-#         print('written')
-# file2 = open('new.txt','a')
-# data = open('./unclean_data_file.txt','r').read()
-# model = genai.GenerativeModel('gemini-1.5-flash-002',safety_settings=safety_settings)
-# chat = model.start_chat()
-# data_clean_prompt = f'''The following contains data which needs to be cleaned,
-#                                 get all the QUESTIONS-ANSWERS in the data and in this format only 
-#                                 question - answer, the data is ->
-#                                 {data} '''
-# res = chat.send_message(data_clean_prompt).text
-# file2.write(res)
+account_info = {
+    "Name":"Ansh Makhija",
+    "Holdings":"10HCL, 50TCS, 100TATA"
+}
 
-data = open('./data_file.txt','r').readlines() 
-file_to_write = open('./cleaned.txt','a')
-# print(len(data))
-# print(data[0:500])
-model = genai.GenerativeModel('gemini-1.5-flash-002',safety_settings=safety_settings)
-chat = model.start_chat()
+functions = {'function_declarations': [{
+       'name': "send_email_customer_service",
+    'description': "this function sends an email to the customer service of the company when the issue could not be resolved",
+},{
+       'name': "question_answer_data",
+    'description': "This contains question answer data about Zerodha that could be useful answer user queries ",
+},{
+       'name': "get_account_info",
+    'description': "This could be used to get the user's account information like holdings, name, etc ",
+},{
+       'name': "market_info",
+    'description': "When the user requires basic market information ",
+},{
+       'name': "place_stock_order",
+    'description': "When the user asks to place a order of stock, requires the stock name and quantity",
+    'parameters': {'type_': 'OBJECT',
+       'properties': {
+         'a': {'type_': 'STRING'},
+         'b': {'type_':'INTEGER'}
+       },
+       'required': ['a','b']}
+}]}
+genai.protos.Tool(functions)
 
-# x = int(6750)
-# for y in range(7000,13993,250):
-text = ''
-# print(x,y)
-for d in data[13750:13993]:
-    text += d
-data_clean_prompt = f'''The following data contains questions and answers,
-                        REMOVE DUPLICATES and QUESTIONS WITH NO ANSWERS, RETURN REST OF THE DATA AS IT IS
-                        the data is being sent over multiple requests as it is quite large
+def place_stock_order(stock_name:str,quantity:int):
+    return f"Your order was placed for {quantity} {stock_name} shares "
 
-                            {text}'''
-res = chat.send_message(data_clean_prompt).text
-file_to_write.write(res)
-print('written')
+def market_info():
+    return "Today NIFT50 Dipped by 0.50%, investors are bearish"
+    
+def get_account_info():
+    chat.send_message(f'This is the customer account info -> {account_info}')
+
+def question_answer_data():
+    chat.send_message(f'This is the data -> {zerodha_info_data}')
+
+def send_email_customer_service():
+    answer =  """An email has been sent to our customer service department 
+    regarding our conversation here , please wait for an email from our customer service """
+    return answer
+
+
+initiation_prompt = f"""You are a HUMAN ASSISTANT for a broker
+called Zerodha, your name is Zero, GIVE INVESTMENT ADVICE, answer stock market questions,
+HELP IN RESEARCH
+Give short and humanlike answers, if you cannot think of a proper solution then email the 
+customer support using a function call
+- Initially if not asked a question just Greet the customer with your name
+- The following is the data which can be used to clear user queries {zerodha_info_data}, use it when required otherwise 
+not 
+"""
+ 
+history = []
+model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings,
+                              system_instruction=initiation_prompt,tools=[])
+print('Model Initiated')
+chat = model.start_chat(history=history)
+print('Sending Data Prompt')
+print(chat.send_message('hello').text)
+
+while True:
+    text = input('Ask- ')
+    res = chat.send_message(text,stream=True)
+    for x in res:
+        print(x.text)
