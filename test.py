@@ -1,6 +1,16 @@
 from api.config import genai,safety_settings
 
-file = open('./final_cleaned_data.txt','r')
+# <<<<<<<- Questions ->>>>>>>
+# Should i invest in EV company stocks 
+# What are my holdings 
+# Add 30TCS shares to my holdings 
+# How was the market today 
+# Can my shares be transferred to my child who is a minor 
+# What is Zerodha coin
+# How to freeze/unfreeze stocks in my demat 
+#    <<<<<<<- End ->>>>>>>
+
+file = open('./txt_files/final_cleaned_data.txt','r')
 zerodha_info_data = file.read()
 
 account_info = {
