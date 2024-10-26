@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     botMessage.textContent = answer.answer;
     document.querySelector(".chat-messages").appendChild(botMessage);
     document.querySelector(".chat-input").value = "";
-    // chatMessages.scrollTop = chatMessages.scrollHeight;
     chatContainer.classList.toggle("hidden");
   });
   document.querySelector(".send-button").addEventListener("click", msg_add);

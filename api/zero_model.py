@@ -83,8 +83,7 @@ customer support using a function call
 - Use function calling for placing stock order, getting market updates, getting account info 
 - If asked a question about Zerodha, use the zerodha_customer_service_answers_data function
 """
-# - The following is the data which can be used to clear user queries {zerodha_info_data}, use it when required otherwise 
-# not 
+
 
 history = []
 model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings,
@@ -93,10 +92,3 @@ model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings
                                                                            zerodha_customer_service_answers_data,get_account_info])
 print('Model Initiated')
 zero_chat = model.start_chat(history=history,enable_automatic_function_calling=True)
-# print('Sending Data Prompt')
-# print(chat.send_message('hello').text)
-
-# while True:
-#     text = input('Ask- ')
-#     res = chat.send_message(text,stream=False)
-#     print(res.text)
