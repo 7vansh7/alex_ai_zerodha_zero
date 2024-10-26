@@ -1,5 +1,5 @@
-from api.config import genai,safety_settings
-
+from config import genai,safety_settings
+import yfinance as yf
 # <<<<<<<- Questions ->>>>>>>
 # Should i invest in EV company stocks 
 # What are my holdings 
@@ -10,7 +10,7 @@ from api.config import genai,safety_settings
 # How to freeze/unfreeze stocks in my demat 
 #    <<<<<<<- End ->>>>>>>
 
-file = open('./txt_files/final_cleaned_data.txt','r')
+file = open('../txt_files/final_cleaned_data.txt','r')
 zerodha_info_data = file.read()
 
 account_info = {
@@ -70,6 +70,9 @@ def send_email_customer_service():
     regarding our conversation here , please wait for an email from our customer service """
     return answer
 
+def stocl_info(stock_name:str):
+    pass
+
 
 initiation_prompt = f"""You are a HUMAN ASSISTANT for a broker
 called Zerodha, your name is Zero, GIVE INVESTMENT ADVICE, answer stock market questions,
@@ -89,11 +92,11 @@ model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings
                                                                           market_info,send_email_customer_service,
                                                                            zerodha_customer_service_answers_data,get_account_info])
 print('Model Initiated')
-chat = model.start_chat(history=history,enable_automatic_function_calling=True)
-print('Sending Data Prompt')
-print(chat.send_message('hello').text)
+zero_chat = model.start_chat(history=history,enable_automatic_function_calling=True)
+# print('Sending Data Prompt')
+# print(chat.send_message('hello').text)
 
-while True:
-    text = input('Ask- ')
-    res = chat.send_message(text,stream=False)
-    print(res.text)
+# while True:
+#     text = input('Ask- ')
+#     res = chat.send_message(text,stream=False)
+#     print(res.text)

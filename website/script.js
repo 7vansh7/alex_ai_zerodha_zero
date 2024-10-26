@@ -1,10 +1,11 @@
-const url = "http://0.0.0.0:8000/cs";
-// const url = "http://0.0.0.0:8000/ce"
+const url = "http://0.0.0.0:8000/zero_chat";
 
-async function postData(question, file = null) {
+async function postData(question, file=null) {
   let formData = new FormData();
   formData.append("question", question);
-  if (file){formData.append('file',file)}
+  if (file) {
+    formData.append("file",file)
+  }
   try {
     const response = await fetch(url, {
       method: "POST",
@@ -58,7 +59,15 @@ async function msg_add(event) {
 document.addEventListener("DOMContentLoaded", function () {
   const chatbotButton = document.querySelector(".open-chatbot-button");
   const chatContainer = document.querySelector(".chat-container");
-  chatbotButton.addEventListener("click", function () {
+  chatbotButton.addEventListener("click",async function () {
+    let answer = await postData(question = "hello")
+    console.log('CHAT initiated ')
+    let botMessage = document.createElement("div");
+    botMessage.classList.add("bot");
+    botMessage.textContent = answer.answer;
+    document.querySelector(".chat-messages").appendChild(botMessage);
+    document.querySelector(".chat-input").value = "";
+    // chatMessages.scrollTop = chatMessages.scrollHeight;
     chatContainer.classList.toggle("hidden");
   });
   document.querySelector(".send-button").addEventListener("click", msg_add);
