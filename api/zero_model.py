@@ -44,7 +44,16 @@ functions = {'function_declarations': [{
          'b': {'type_':'INTEGER'}
        },
        'required': ['a','b']}
-}]}
+},{
+    'name': "stock_info",
+    'description': "This gives info for any particular stock, just needs the TICKER for that stock",
+    'parameters': {'type_': 'OBJECT',
+       'properties': {
+         'a': {'type_': 'STRING'},
+       },
+       'required': ['a']}
+}
+]}
 genai.protos.Tool(functions)
 
 def place_stock_order(stock_name:str,quantity:int):
@@ -70,9 +79,9 @@ def send_email_customer_service():
     regarding our conversation here , please wait for an email from our customer service """
     return answer
 
-def stocl_info(stock_name:str):
-    pass
-
+def stock_info(stock_ticker:str):
+    stock = yf.Ticker(f"{stock_ticker}.NS")
+    return stock.info
 
 initiation_prompt = f"""You are a HUMAN ASSISTANT for a broker
 called Zerodha, your name is Zero, GIVE INVESTMENT ADVICE, answer stock market questions,
@@ -82,6 +91,8 @@ customer support using a function call
 - Initially if not asked a question just Greet the customer with your name
 - Use function calling for placing stock order, getting market updates, getting account info 
 - If asked a question about Zerodha, use the zerodha_customer_service_answers_data function
+- If asked about stock information, use the stock_info function, just give it the ticker
+  for that stock
 """
 
 
@@ -89,6 +100,7 @@ history = []
 model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings,
                               system_instruction=initiation_prompt,tools=[place_stock_order,
                                                                           market_info,send_email_customer_service,
-                                                                           zerodha_customer_service_answers_data,get_account_info])
+                                                                           zerodha_customer_service_answers_data,get_account_info,
+                                                                           stock_info])
 print('Model Initiated')
 zero_chat = model.start_chat(history=history,enable_automatic_function_calling=True)
