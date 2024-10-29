@@ -8,12 +8,14 @@ import yfinance as yf
 # Can my shares be transferred to my child who is a minor 
 # What is Zerodha coin
 # How to freeze/unfreeze stocks in my demat 
+# What is Securities Transaction Tax (STT) and how is it calculated?  
 #    <<<<<<<- End ->>>>>>>
 
 file = open('../txt_files/final_cleaned_data.txt','r')
-zerodha_info_data = file.read()
+zerodha_data = file.read()
 
 account_info = {
+
     "Name":"Ansh Makhija",
     "Holdings":"10HCL, 50TCS, 100TATA"
 }
@@ -67,7 +69,7 @@ def get_account_info():
 
 def  zerodha_customer_service_answers_data(question:str):
     prompt = f'''You are provided with Zerodha customer service data, answer based on the data
-                    {zerodha_info_data}'''
+                    {zerodha_data}'''
     model2 = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings,
                               system_instruction=prompt)
     chat2 = model2.start_chat(history=[])
@@ -76,7 +78,7 @@ def  zerodha_customer_service_answers_data(question:str):
 
 def send_email_customer_service():
     answer =  """An email has been sent to our customer service department 
-    regarding our conversation here , please wait for an email from our customer service """
+    regarding our conversation here , please wait for an email from our customer service"""
     return answer
 
 def stock_info(stock_ticker:str):
@@ -95,12 +97,10 @@ customer support using a function call
   for that stock
 """
 
-
 history = []
 model = genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings,
                               system_instruction=initiation_prompt,tools=[place_stock_order,
                                                                           market_info,send_email_customer_service,
-                                                                           zerodha_customer_service_answers_data,get_account_info,
-                                                                           stock_info])
-print('Model Initiated')
+                                                                          zerodha_customer_service_answers_data,get_account_info,
+                                                                          stock_info])
 zero_chat = model.start_chat(history=history,enable_automatic_function_calling=True)
